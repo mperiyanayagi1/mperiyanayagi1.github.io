@@ -1,0 +1,558 @@
+<html>
+<html lang="en">
+<head>
+    <title>MITHRA BUILDARC</title>
+    <link rel="icon" href="MBC - IMAGE.jpeg">
+   
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            
+        }
+        
+        .hero
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            background-image: url(bg-MBC.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,2);
+        }
+        h1{
+            color: #0a2647;
+            padding-top: 20px;
+            font-size: 300%;
+            font-family: 'Montserrat';
+        }
+        .hero-text h2{
+            font-size: 50px;
+            color: #0a2647;
+        }
+        .hero-text p{
+            font-size: 18px;
+            padding-top: 10px;
+            color: #0a2647;
+        }
+        .hero-image img{
+            width: 450px;
+            border-radius: 15px;
+        }
+        .hero-text {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .service-text h2{
+            font-size: 30px;
+            color: #0a2647;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        .service-container{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+        .service-box{
+          background: white;
+            width:250px;
+            padding: 25px;
+            border-radius:10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .service-box img{
+            width: 200;
+            border-radius: 15px;
+        }
+        .service-box h2{
+            text-align: center;
+            padding-top: 50px;
+            color: #0a2647;
+        }
+        .service-box p{
+            flex-grow: 1;
+            text-align: center;
+            color: black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .service-container2{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service-box2{
+            background-color: white;
+            width:250px;
+            padding: 25px;
+            border-radius:10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .service-box2 img{
+            width: 200;
+            border-radius: 15px;
+        }
+        .service-box2 h2{
+            text-align: center;
+            padding-top: 50px;
+            color: #0a2647;
+        }
+        .service-box2 p{
+            flex-grow: 1;
+            text-align: center;
+            color: black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .contact-section{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+            width: 100%;
+
+        }
+        .contact-section
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+            padding: 60px 8%;
+            
+            flex-wrap: wrap;
+        }
+        .contact-box
+        {
+            flex: 1;
+            min-width: 300px;
+        }
+        .contact-box h2{
+            font-size: 42px;
+            color:#0f172a;
+            margin-bottom: 25px;
+            color: #0a2647;
+            font-weight: 700;
+        }
+        .line{
+            width: 70px;
+            color: #333;
+            background: #0d6efd;
+            margin-bottom: 25px;
+        }
+        .contact-box p,a{
+            font-size: 18px;
+            color:#2563eb;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+        .map-box{
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+        }
+        .map-box iframe{
+            width: 100%;
+            height: 400px;
+            max-width: 550px;
+            border: none;
+            border-radius: 15px;
+        }
+        @media(max-width:768px){
+            .contact-section{
+                flex-direction: column;
+            }
+            .contact-box h2{
+                font-size: 32px;
+            }
+            .contact-box p{
+                font-size: 18px;
+            }
+
+        }
+        .gallery{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img{
+            width: 300px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .main-image{
+            width: 300%;
+            border-radius: 10px;
+        }
+        
+        .btn{
+            margin-top: auto;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .popup{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-image{
+            width: 1000px;
+            max-width: ;
+            border-radius: 10px;
+        }
+        .close-btn{
+            position:absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 45px;
+            color: white;
+            cursor: pointer;
+
+        }
+        .popup-gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <H1> MITHRA BUILDARC </H1>
+    </center>
+    <section class="hero">
+    <div class=" hero-text">
+    <h2> MITHRA BUILDARC </H2>
+    <P><br> We provide complete architectural, interior, structural, and construction solutions with modern designs and quality workmanship.  From planning and approvals to <br>interiors, landscaping, valuations, and bank loan support, we deliver professional<br> services tailored to residential, commercial, and industrial projects.</P>
+    <p><br>We focus on creativity, functionality, and customer satisfaction to bring every project<br> to life with excellence and precision.</p>
+    </div>
+    <div class="hero-image">
+        <img src="building for MBC .jpeg"></img>
+    </div>
+    </section>
+    <section class="service">
+        <div class="service-text">
+            <h2> OUR SERVICES </h2>
+        </div>
+        <div class="service-container">
+            <div class="service-box">
+                <img src="building constructio.jpeg">
+                <h2>BUILDING CONSTRUCTION</h2>
+                <p> <b>Expert Construction services for homes and offices with modern design, quality work, on-time projects delivery.</b> </p>
+                <center>
+                <button onclick="openPopup()"
+                class="btn">View Image</button>
+                </center>
+                <div id="popupBox" class="popup">
+                    <span class="close-btn"
+                    onclick="closePopup()">&times;
+                </span>
+                <div class="gallery">
+                <img src="image1.jpg" class="popup-image">
+                <img src="image2.jpg" class="popup-image">
+                <img src="image3.jpg" class="popup-image">
+                <img src="image4.jpg" class="popup-image">
+                </div>
+            </div>
+                 <script>
+
+function openPopup(){
+
+    document.getElementById("popupBox").style.display =
+    "flex";
+
+}
+
+function closePopup(){
+
+    document.getElementById("popupBox").style.display =
+    "none";
+
+}
+
+</script>
+                
+            </div>
+            <div class="service-box2">
+                <img src="structual design.jpeg">
+                <h2>STRUCTUAL DESIGN</h2>
+                <p> <b>Safe and reliable structural design plans for all buildings with focus on strength, stability, and code compliance.</b> </p>
+                <center>
+                <button onclick="openPopup1()"
+                class="btn">View Image</button>
+                </center>
+                <div id="popupBox1" class="popup">
+                    <span class="close-btn"
+                    onclick="closePopup1()">&times;
+                </span>
+                <div class="gallery">
+                <img src="image2.1.jpg" class="popup-image">
+                <img src="image 2.2.jpg" class="popup-image">
+                <img src="image 2.3.jpg" class="popup-image">
+                <img src="image 2.4.jpg" class="popup-image">
+                </div>
+            </div>
+                 <script>
+
+function openPopup1(){
+
+    document.getElementById("popupBox1").style.display =
+    "flex";
+
+}
+
+function closePopup1(){
+
+    document.getElementById("popupBox1").style.display =
+    "none";
+
+}
+
+</script>
+            </div>
+            <div class="service-box">
+                <img src="interior design.jpeg"class="main-image">
+                
+                <h2>INTERIOR DESIGN</h2>
+                <p> <b>Creative and functional interior design services for homes and offices that match your style and budget needs.</b> </p>
+                <center>
+                <button onclick="openPopup2()"
+                class="btn">View Image</button>
+                </center>
+                <div id="popupBox2" class="popup">
+                    <span class="close-btn"
+                    onclick="closePopup2()">&times;
+                </span>
+                <div class="gallery">
+                <img src="image 3.1.jpg" class="popup-image">
+                <img src="image 3.2.jpg" class="popup-image">
+                <img src="image 3.3.jpg" class="popup-image">
+                <img src="image 3.4.jpg" class="popup-image">
+                </div>
+            </div>
+                 <script>
+
+function openPopup2(){
+
+    document.getElementById("popupBox2").style.display =
+    "flex";
+
+}
+
+function closePopup2(){
+
+    document.getElementById("popupBox2").style.display =
+    "none";
+
+}
+
+</script>
+            </div>
+            <div class="service-box">
+                <img src="landscaping.jpeg">
+                <h2>LANDSCAPING</h2>
+                <p> <b>Beautiful outdoor landscaping solution for gardens and yards with modern layouts, plants, and elegant designs.</b> </p>
+                <center>
+                <button onclick="openPopup3()"
+                class="btn">View Image</button>
+                </center>
+                <div id="popupBox3" class="popup">
+                    <span class="close-btn"
+                    onclick="closePopup3()">&times;
+                </span>
+                <div class="gallery">
+                <img src="IMAGE 4.1.jpeg" class="popup-image">
+                <img src="IMAGE 4.2.jpeg" class="popup-image">
+                <img src="IMAGE 4.3.jpeg" class="popup-image">
+                <img src="IMAGE 4.4.jpeg" class="popup-image">
+                </div>
+            </div>
+                 <script>
+
+function openPopup3(){
+
+    document.getElementById("popupBox3").style.display =
+    "flex";
+
+}
+
+function closePopup3(){
+
+    document.getElementById("popupBox3").style.display =
+    "none";
+
+}
+
+</script>
+            </div>
+        </div>
+        <div class="service-container2">
+            <div class="service-box2">
+                <img src="approval.jpeg">
+                <h2>BUILDING PLAN APPROVAL</h2>
+                <p> <b>Complete building plan approval services with accurate drawings, permits, and document support for hassle-free sanction.</b> </p>
+                <center>
+                <button onclick="openPopup4()"
+                class="btn">View Image</button>
+                </center>
+                <div id="popupBox4" class="popup">
+                    <span class="close-btn"
+                    onclick="closePopup4()">&times;
+                </span>
+                <div class="gallery">
+                <img src="image 5.1.jpg" class="popup-image">
+                <img src="image 5.2.jpg" class="popup-image">
+                <img src="image 5.3.jpg" class="popup-image">
+                <img src="image 5.4.jpg" class="popup-image">
+                </div>
+            </div>
+                 <script>
+
+function openPopup4(){
+
+    document.getElementById("popupBox4").style.display =
+    "flex";
+
+}
+
+function closePopup4(){
+
+    document.getElementById("popupBox4").style.display =
+    "none";
+
+}
+
+</script>
+            </div>
+            <div class="service-box2">
+                <img src="bill of quantity.jpeg">
+                <h2>BILL OF QUANTITIES</h2>
+                <p> <b>Accurate BOQ services for cost estimation and material planning with item-wise breakdown for smooth project execution.</b>.</b> </p>
+         <center>
+                <button onclick="openPopup5()"
+                class="btn">View Image</button>
+                </center>
+                <div id="popupBox5" class="popup">
+                    <span class="close-btn"
+                    onclick="closePopup5()">&times;
+                </span>
+                <div class="gallery">
+                <img src="IMAGE 6.1.jpeg" class="popup-image">
+                <img src="IMAGE 6.3.jpeg" class="popup-image">
+                <img src="IMAGE 6.4.jpeg" class="popup-image">
+                <img src="IMAGE 6.2.jpeg" class="popup-image">
+                </div>
+            </div>
+                 <script>
+
+function openPopup5(){
+
+    document.getElementById("popupBox5").style.display =
+    "flex";
+
+}
+
+function closePopup5(){
+
+    document.getElementById("popupBox5").style.display =
+    "none";
+
+}
+
+</script>       
+            </div>
+            <div class="service-box2">
+                <img src="inspector factories.jpeg">
+                <h2>INSPECTOR OF FACTORIES</h2>
+                <p> <b>Expert IOF approval and compliance services to ensure industrial projects meet safety and government regulation norms.</b> </p>
+                <center>
+                <button onclick="openPopup6()"
+                class="btn">View Image</button>
+                </center>
+                <div id="popupBox6" class="popup">
+                    <span class="close-btn"
+                    onclick="closePopup6()">&times;
+                </span>
+                <div class="gallery">
+                <img src="image 7.1.jpg" class="popup-image">
+                <img src="image 7.2.jpg" class="popup-image">
+                <img src="image 7.3.jpg" class="popup-image">
+                <img src="image 7.4.jpg" class="popup-image">
+                </div>
+            </div>
+                 <script>
+
+function openPopup6(){
+
+    document.getElementById("popupBox6").style.display =
+    "flex";
+
+}
+
+function closePopup6(){
+
+    document.getElementById("popupBox6").style.display =
+    "none";
+
+}
+
+</script>       
+            </div>
+        </div>
+    </section>
+      
+        <section class="contact-section">
+            <div class="contact-box">
+                <h2>CONTACT US</h2>
+                <div class="line"></div>
+                <p style="color: #0a2647;"><strong> ☎ PHONE: </strong> </P>
+                <a href="tel: +91 96290 15603  ">+91 96290 15603 </a>
+               
+                <p style="color: #0a2647;"><strong> ✉ E-MAIL US</strong></P>
+                <a href="mailto: mithrabuilders11@gmail.com">mithrabuilders11@gmail.com</a>
+                <br><a href="mailto: dlakshmi5891@gmail.com">dlakshmi5891@gmail.com</a>
+                    <p style="color: #0a2647;"><strong> ➤ ADDRESS:</strong><br>No.9,First Floor, </br>ECR road, Lawspet,</br>Puducherry-605008</Br> </p>
+                    <p style="color: #0a2647;""><strong> 🕒 OFFICE HOURS</strong><br>Monday to Saturday<br>9.00 am to 6.00 pm</p>
+            </div>
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.312617099105!2d79.8194126!3d11.9528443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361ed16dcef01%3A0x3b51b7ed1290cfa0!2sMithra%20Builders%20%26%20Consortium!5e0!3m2!1sen!2sin!4v1779528376316!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </iframe>
+                </div>
+        </section>
+        
+        
+    
+    
+</body>
+</html>
